@@ -1,0 +1,4 @@
+import math
+from math import pi
+x=float(input("What is the radius of your circle?"))
+print(pi*(x)**2)
