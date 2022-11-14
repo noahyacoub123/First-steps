@@ -1,0 +1,24 @@
+def linear_search(l, item, issorted=False):
+    j = 0
+    while j < len(l):
+        if l[j] == item:
+            return j
+        j += 1
+    return None
+
+def binary_search(l, item, issorted=False):
+    if issorted == False:
+        return linear_search(l, item)
+    if issorted == True:
+        low = 0
+        up = len(l)-1
+    while low <= up:
+        mid = (low + up)//2
+        if l[mid] == item:
+            return mid
+        else:
+            if l[mid] < item:
+                low = mid + 1
+            else:
+                up = mid - 1
+    return None
